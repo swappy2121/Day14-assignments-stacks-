@@ -24,8 +24,17 @@ public class StackClass1 {
                 head = newNode;
                 System.out.print(newNode.data + "->");
             }
-        }
 
+            public static int pop() {
+                int top = head.data;
+                head = head.next;
+                return top;
+            }
+
+            public static int peak() {
+                return head.data;
+            }
+        }
 
         public static void main(String[] args) {
 
@@ -33,6 +42,14 @@ public class StackClass1 {
             add.push(70);
             add.push(30);
             add.push(56);
+
+
+            while (!add.isEmpty()) {
+                System.out.println(add.peak());
+                add.pop();
+            }
         }
     }
 }
+
+
